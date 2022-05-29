@@ -1,0 +1,14 @@
+tsconfig
+
+NODEMOON
+
+nodemon dist/index.js
+
+## Manter o monitoramente rodando
+    npm run watch-ts
+
+## Em outro terminal manter o 
+    nodemon dist/index.js
+
+## ts-node src/index.ts Roda e compila
+
