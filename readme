@@ -6,9 +6,14 @@ nodemon dist/index.js
 
 ## Manter o monitoramente rodando
     npm run watch-ts
+        "start-dev": "nodemon -e ts,json,mustache src/server.ts",
+        Seta as extensões que a aplicação te de ficar atenta a cada mudança.
 
 ## Em outro terminal manter o 
     nodemon dist/index.js
 
 ## ts-node src/index.ts Roda e compila
+
+## ERRO could not find a declaration file for module express
+    npm install -D @types/module-name
 
