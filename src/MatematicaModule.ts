@@ -9,3 +9,5 @@ export function subtrair(x:number, y:number): number {
 export function multiplicar(x:number, y:number): number {
     return x*y;
 }
+
+

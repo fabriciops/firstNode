@@ -17,3 +17,5 @@ nodemon dist/index.js
 ## ERRO could not find a declaration file for module express
     npm install -D @types/module-name
 
+##  Assistir as mudanças nas extensõesg
+"start-dev": "nodemon -e ts,json,mustache src/server.ts",
