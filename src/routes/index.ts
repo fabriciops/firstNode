@@ -35,7 +35,7 @@ router.get('/', (req: Request, res: Response)=>{
 
 
     // estamos enviando uma variável ao template
-    res.render('index',{
+    res.render('pages/index',{
         user, product, listasimples :[
             
         ]
@@ -44,6 +44,29 @@ router.get('/', (req: Request, res: Response)=>{
 
 router.get('/contato', (req: Request, res: Response)=>{
     res.send('contato');
+});
+
+router.get('/form', (req: Request, res: Response)=>{
+    res.render('pages/form');
+});
+
+router.get('/formGet', (req: Request, res: Response)=>{
+    console.log("query string", req.query.nome);
+    
+    let idade = 0;
+    let mostrarIdade = false;
+
+    if(req.query.ano){
+        let anoNascimento: number = parseInt(req.query.ano as string);
+        let anoAtual: number = new Date().getFullYear();
+        idade =  anoAtual - anoNascimento;
+        mostrarIdade = true;
+    }
+    res.render('pages/form',{
+        
+        mostrarIdade,
+        idade,
+    });
 });
 
 router.get('/sobre', (req: Request, res: Response)=>{

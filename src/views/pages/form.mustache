@@ -1,0 +1,14 @@
+{{ >partials/header }}
+
+<h2>
+    Digite seu ano de nascimento
+</h2>
+
+<form action="formGet">
+    <input type="number" name="ano" id="ano" placeholder="Ano de nacimento?">
+    <button type="submit">Enviar</button>
+</form>
+{{ # mostrarIdade }}
+    <hr>
+    <p> você tem {{ idade }}</p> 
+{{ / mostrarIdade }}

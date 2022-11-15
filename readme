@@ -19,3 +19,6 @@ nodemon dist/index.js
 
 ##  Assistir as mudanças nas extensõesg
 "start-dev": "nodemon -e ts,json,mustache src/server.ts",
+
+## Arquivo parcial:
+    É o mesmo que os Componentes
