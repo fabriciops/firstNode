@@ -1,0 +1,37 @@
+{{ >partials/header }}
+    {{! Acessando os atributos da variável, nos tratamos a exibição no js e trazemos ao template
+        Uma flag trás a possibilidade de exibição
+    }}
+    <h1>Olá {{ user.name }}, sua idade = {{ user.age }} </h1>
+
+    
+    {{# user.showOld}}
+        <p>
+            Como vai a vida?
+        </p>
+    {{/ user.showOld}}
+
+    {{# product }}
+        <ul>
+            <li>
+                {{title}} - R$ {{ price }}
+            </li>
+        </ul>
+    {{/ product }}
+    
+    {{! # é um if e o ^ é um else }}
+    <ul>
+        {{# listasimples }}
+            <li>
+                {{ . }}
+            </li>
+        {{/ listasimples }}
+        {{^ listasimples }}
+            <p>Não há frase hoje</p>
+        {{/ listasimples }}
+
+    </ul>
+    
+
+</body>
+</html>
